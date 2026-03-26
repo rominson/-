@@ -104,7 +104,7 @@ const handleApiError = (error: unknown, operationType: OperationType, path: stri
 };
 
 // --- Calendar Utilities ---
-const APP_URL = process.env.APP_URL || window.location.origin;
+const APP_URL = import.meta.env.VITE_APP_URL || window.location.origin;
 
 const generateGoogleCalendarLink = (title: string, date: Date, description: string) => {
   const start = date.toISOString().replace(/-|:|\.\d+/g, '');
